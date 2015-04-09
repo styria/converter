@@ -5,14 +5,14 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.text.ParsePosition;
-import javax.swing.JOptionPane;
+import javax.swing.JOptionPane;             //Megan: Added so we can use JOptionPane
 public class ArrayListGitHub {
 
     final static double inch_const = 2.54;
     final static double feet_const = 0.3048;
     
     public static void main(String[] args){
-        String user_choice;
+        String user_choice;                 //String has to be used as we're taking input
         int choice = 0;
         
         String[] myNums;
@@ -28,24 +28,24 @@ public class ArrayListGitHub {
        
              do {
             user_choice = JOptionPane.showInputDialog(myNums);
-            choice = Integer.parseInt(user_choice);
+            choice = Integer.parseInt(user_choice); //Megan: Input is a string so parse
             
             if(choice == 1){                                          
                 String conv = JOptionPane.showInputDialog("Input the value in centimetres:"); 
-                double cm = Double.parseDouble(conv);
+                double cm = Double.parseDouble(conv); //Megan: Input is a string so parse to double
                 double output = cm / inch_const;
                 JOptionPane.showMessageDialog(null, conv+" centimetres is "
                         +round(output,2)+" inches");
             } else if(choice == 2){
                 String conv = JOptionPane.showInputDialog("Input the value in metres: ");
-                double m = Double.parseDouble(conv);
+                double m = Double.parseDouble(conv); //Megan: Input is a string so parse to double
                 double output = m / feet_const;
                 JOptionPane.showMessageDialog(null, conv+" metres is "+round(output,2)+" feet");
             } else if(choice == 3){
                 JOptionPane.showMessageDialog(null, "This system will close");
                 System.exit(0);
             }  else {
-                JOptionPane.showMessageDialog(null, "Invalid input! Try again.");
+                JOptionPane.showMessageDialog(null, "Invalid input! Try again."); //Megan: Error message for invalid choice
             }
         } while (choice != 3);
     }
