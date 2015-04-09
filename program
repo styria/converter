@@ -16,7 +16,7 @@ public class ArrayListGitHub {
         int choice = 0;
         
         String[] myNums;
-        myNums = new String[6];
+        myNums = new String[6];             //initalised array by Erdal
         
         myNums[0] = "Please choose between optiones 1 - 5";
         myNums[1] = "1 CM to Inches";
@@ -24,6 +24,7 @@ public class ArrayListGitHub {
         myNums[3] = "3 Celsius to Fahrenheit";
         myNums[4] = "4 CM to Feet";
         myNums[5] = "5 KM to Miles";
+                                             //Array filled by Erdal
        
              do {
             user_choice = JOptionPane.showInputDialog(myNums);
