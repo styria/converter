@@ -5,22 +5,28 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.text.ParsePosition;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
+public class ArrayListGitHub {
 
-public class Assignment1 {
     final static double inch_const = 2.54;
     final static double feet_const = 0.3048;
     
     public static void main(String[] args){
         String user_choice;
         int choice = 0;
-        Scanner sc = new Scanner(System.in);
-        do {
-            user_choice = JOptionPane.showInputDialog("Please select which option you"
-                    + "would like:\n1. Convert from centimetres to inch\n2. Convert "
-                    + "from metres to feet\n3. Exit program");
-                        
+        
+        String[] myNums;
+        myNums = new String[6];
+        
+        myNums[0] = "Please choose between optiones 1 - 5";
+        myNums[1] = "1 CM to Inches";
+        myNums[2] = "2 Metres to Feet";
+        myNums[3] = "3 Celsius to Fahrenheit";
+        myNums[4] = "4 CM to Feet";
+        myNums[5] = "5 KM to Miles";
+       
+             do {
+            user_choice = JOptionPane.showInputDialog(myNums);
             choice = Integer.parseInt(user_choice);
             
             if(choice == 1){                                          
@@ -51,3 +57,4 @@ public class Assignment1 {
         return bd.doubleValue();
     }  
 }
+   
