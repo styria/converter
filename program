@@ -1,21 +1,27 @@
-
 package assignment1;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.text.ParsePosition;
-import javax.swing.JOptionPane;             //Megan: Added so we can use JOptionPane
-public class ArrayListGitHub {
+import java.util.Scanner;
+import javax.swing.JOptionPane;                          //Megan: Added so we can use JOptionPane
 
+public class Assignment1 {
     final static double inch_const = 2.54;
     final static double feet_const = 0.3048;
     
     public static void main(String[] args){
-        String user_choice;                 //String has to be used as we're taking input
-        int choice = 0;
+        String user_choice;             //String has to be used as we're taking input
+        int choice =0;  
         
-        String[] myNums;
+        double centimeter;       
+        double inches = 0.393700787; 
+        double feet = 0.3048;
+        double metre;
+        double answer; 
+        
+          String[] myNums;
         myNums = new String[6];             //initalised array by Erdal
         
         myNums[0] = "Please choose between optiones 1 - 5";
@@ -25,37 +31,49 @@ public class ArrayListGitHub {
         myNums[4] = "4 CM to Feet";
         myNums[5] = "5 KM to Miles";
                                              //Array filled by Erdal
-       
-             do {
-            user_choice = JOptionPane.showInputDialog(myNums);
-            choice = Integer.parseInt(user_choice); //Megan: Input is a string so parse
-            
-            if(choice == 1){                                          
-                String conv = JOptionPane.showInputDialog("Input the value in centimetres:"); 
-                double cm = Double.parseDouble(conv); //Megan: Input is a string so parse to double
-                double output = cm / inch_const;
-                JOptionPane.showMessageDialog(null, conv+" centimetres is "
-                        +round(output,2)+" inches");
-            } else if(choice == 2){
-                String conv = JOptionPane.showInputDialog("Input the value in metres: ");
-                double m = Double.parseDouble(conv); //Megan: Input is a string so parse to double
-                double output = m / feet_const;
-                JOptionPane.showMessageDialog(null, conv+" metres is "+round(output,2)+" feet");
-            } else if(choice == 3){
-                JOptionPane.showMessageDialog(null, "This system will close");
-                System.exit(0);
-            }  else {
-                JOptionPane.showMessageDialog(null, "Invalid input! Try again."); //Megan: Error message for invalid choice
-            }
-        } while (choice != 3);
-    }
     
-    public static double round(double value, int places) {
-        if (places < 0) 
-            throw new IllegalArgumentException();
-        BigDecimal bd = new BigDecimal(value);
-        bd = bd.setScale(places, RoundingMode.HALF_UP);
-        return bd.doubleValue();
-    }  
+    String user_num; 
+int num;  
+num =1;
+user_num =JOptionPane.showInputDialog("centimeter-Inch(1)-Feet_meters(2) Exit (3)");  
+num = Integer.parseInt(user_num);
+
+
+switch (num) {
+    case 1:                         // case statements input by Huw
+        do{ 
+        String cm_inches = null; 
+        cm_inches = JOptionPane.showInputDialog(null, "enter input");                          
+        centimeter = Double.parseDouble(cm_inches); 
+       
+        answer = centimeter/inches; 
+        JOptionPane.showMessageDialog (null, answer);
+        num++;
+       }
+       while (num <= 100); 
+       if (num >=100);
+       
+       
+                break; 
+        
+    case 2:
+        do{ 
+        String feet_metre; 
+        feet_metre = JOptionPane.showInputDialog(null, "enter input "); 
+        metre = Double.parseDouble(feet_metre); 
+       
+        answer = metre/feet; 
+        JOptionPane.showMessageDialog (null, answer); 
+        num++; 
+        }
+         while (num <= 100); 
+       if (num >=100); 
+       break; 
+      } 
+        JOptionPane.showMessageDialog(null, "Invalid input! Try again.");   //Megan: Error message for invalid choice
 }
+
    
+    }  
+
+
