@@ -21,6 +21,7 @@ public class Assignment1 {
         double feet2 = 0.032808399;
         double metre;
         double answer; 
+        double mile = 0.621371192;
         
           String[] myNums;
         myNums = new String[6];             //initalised array by Erdal
@@ -98,8 +99,24 @@ switch (num) {
        while (num <= 100); 
        if (num >=100);
         break;
+        
+         case 5: //MHH
+        do
+        {
+            String user_kms = JOptionPane.showInputDialog(null, "Input KM's:"); //Taking input and storing in string-MHH
+            double kmtrs = Double.parseDouble(user_kms); //Parsing string to double-MHH
+            
+            answer = (kmtrs*mile); //Calculation-MHH
+            JOptionPane.showMessageDialog(null, answer);
+            num++;
+        }
+        while (num <= 100); 
+       if (num >=100);
+        break;
+        
+         default: JOptionPane.showMessageDialog(null, "Invalid input! Try again.");   //Megan: Error message for invalid choice
       } 
-        JOptionPane.showMessageDialog(null, "Invalid input! Try again.");   //Megan: Error message for invalid choice
+       
 }
 
    
