@@ -18,6 +18,7 @@ public class Assignment1 {
         double centimeter;       
         double inches = 0.393700787; 
         double feet = 0.3048;
+        double feet2 = 0.032808399;
         double metre;
         double answer; 
         
@@ -35,7 +36,7 @@ public class Assignment1 {
     String user_num; 
 int num;  
 num =1;
-user_num =JOptionPane.showInputDialog("centimeter-Inch(1)-Feet_meters(2) Exit (3)");  
+user_num =JOptionPane.showInputDialog(myNums);  
 num = Integer.parseInt(user_num);
 
 
@@ -69,11 +70,37 @@ switch (num) {
          while (num <= 100); 
        if (num >=100); 
        break; 
+        
+      case 3: //Huw to do
+        do{ 
+        String feet_metre; 
+        feet_metre = JOptionPane.showInputDialog(null, "enter input "); 
+        metre = Double.parseDouble(feet_metre); 
+       
+        answer = metre/feet; 
+        JOptionPane.showMessageDialog (null, answer); 
+        num++; 
+        }
+         while (num <= 100); 
+       if (num >=100); 
+       break;  
+        
+    case 4:  //Case 4 done by Shaq
+        do{ 
+        String cm_feet = null; 
+        cm_feet = JOptionPane.showInputDialog(null, "enter input");                          
+        centimeter = Double.parseDouble(cm_feet); 
+       
+        answer = centimeter*feet2;
+        JOptionPane.showMessageDialog (null, answer);
+        num++;
+       }
+       while (num <= 100); 
+       if (num >=100);
+        break;
       } 
         JOptionPane.showMessageDialog(null, "Invalid input! Try again.");   //Megan: Error message for invalid choice
 }
 
    
     }  
-
-
