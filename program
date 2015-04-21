@@ -19,6 +19,7 @@ public class Assignment1 {
         double inches = 0.393700787; 
         double feet = 0.3048;
         double feet2 = 0.032808399;
+        double celsius;
         double metre;
         double answer; 
         double mile = 0.621371192;
@@ -71,34 +72,24 @@ switch (num) {
          while (num <= 100); 
        if (num >=100); 
        break; 
+      
+      //Case 3 done by Shaq  
         
-      case 3: //Huw to do
-        do{ 
-        String feet_metre; 
-        feet_metre = JOptionPane.showInputDialog(null, "enter input "); 
-        metre = Double.parseDouble(feet_metre); 
-       
-        answer = metre/feet; 
-        JOptionPane.showMessageDialog (null, answer); 
-        num++; 
-        }
-         while (num <= 100); 
-       if (num >=100); 
-       break;  
+      case 3: //What runs if 3 is entered
+                String input_celsius = JOptionPane.showInputDialog(null, "Insert Celsius value:"); //Input what temperature in celsius you want to be converted
+                celsius = Double.parseDouble(input_celsius); //Coverting input_celsius to a double
+                answer = celsius * 1.8 + 32; //What number the user inputs multiplied by 1.8 plus 32
+                JOptionPane.showMessageDialog(null, answer+" degrees fahrenheit."); //Display celsius in fahrenheit
+                break; //End of case 3
         
-    case 4:  //Case 4 done by Shaq
-        do{ 
-        String cm_feet = null; 
-        cm_feet = JOptionPane.showInputDialog(null, "enter input");                          
-        centimeter = Double.parseDouble(cm_feet); 
-       
-        answer = centimeter*feet2;
-        JOptionPane.showMessageDialog (null, answer);
-        num++;
-       }
-       while (num <= 100); 
-       if (num >=100);
-        break;
+        //Case 4 done by Shaq
+          
+        case 4: //What runs if 4 is entered
+            String input_cm = JOptionPane.showInputDialog(null, "Insert CM value:"); //Input how many cm you want to be converted
+            centimeter = Double.parseDouble(input_cm); //Coverting input_cm to a double
+            answer = centimeter * feet2; //What number the user inputs multiplied by feet2 value
+            JOptionPane.showMessageDialog(null, answer+" feet."); //Display cm in feet
+            break; //End of case 4
         
          case 5: //MHH
         do
