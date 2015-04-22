@@ -1,4 +1,4 @@
-package assessment1;
+package shit;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -7,7 +7,7 @@ import java.text.ParsePosition;
 import java.util.Scanner;
 import javax.swing.JOptionPane;                          //Megan: Added so we can use JOptionPane
 
-public class Assesment1 {
+public class Shit {
     final static double inch_const = 2.54;
     final static double feet_const = 0.3048;
     
@@ -52,7 +52,7 @@ switch (num) {
         centimeter = Double.parseDouble(cm_inches); 
        
         answer = centimeter/inches; 
-        JOptionPane.showMessageDialog (null, answer);
+        JOptionPane.showMessageDialog (null, answer + " Inches");
         break;
        }
  
@@ -64,7 +64,7 @@ switch (num) {
         metre = Double.parseDouble(feet_metre); 
        
         answer = metre/feet; 
-        JOptionPane.showMessageDialog (null, answer); 
+        JOptionPane.showMessageDialog (null, answer + " Feet"); 
         break;
         }
 
@@ -94,7 +94,7 @@ switch (num) {
             double kmtrs = Double.parseDouble(user_kms); //Parsing string to double-MHH
             
             answer = (kmtrs*mile); //Calculation-MHH
-            JOptionPane.showMessageDialog(null, answer);
+            JOptionPane.showMessageDialog(null, answer + " Miles");
         }
             case 6: //by Erdal
         
