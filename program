@@ -1,4 +1,4 @@
-package shit;
+package assessment1;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -7,7 +7,7 @@ import java.text.ParsePosition;
 import java.util.Scanner;
 import javax.swing.JOptionPane;                          //Megan: Added so we can use JOptionPane
 
-public class Shit {
+public class Assesment1 {
     final static double inch_const = 2.54;
     final static double feet_const = 0.3048;
     
